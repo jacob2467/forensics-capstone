@@ -1,9 +1,0 @@
-Computers store information in base 2, also known as binary. This means that every bit of information on your computer, from the code used to run the app you’re using
-to read this, to the files in your “homework” folder, can be broken down into a seemingly endless string of 0s and 1s. A good example of this is the alphabet. There
-are many ways to store letters of the alphabet, but one of the simplest methods is called ASCII. With ASCII, computers don’t really see letters as letters; 
-instead, letters are stored based on their numeric value, with A being equivalent to 1, B to 2, and so on. This seems pretty simple on its own, but remember that
- computers store information in binary, so the “1” is actually 00000001, the “2” is actually 00000010, etc. There are a variety of methods used to store binary
-information, but most computers either use a hard disk drive (HDD) or solid state drive (SSD). Due to the binary nature of computers, all forms of digital storage
-rely on binary forms of data storage. To understand this concept with an analogy, imagine taking a standardized test with four multiple choice questions that each
-have four possible answers (A, B, C, or D). If you answer B to question 1, you could represent that as 0100. In other words, A is not filled in, B is filled in,
-C is not, and D is not. Using this system, if a student answered A, B, C, D in that order, you could represent that as 1000 0100 0010 0001 (without the spaces). 
