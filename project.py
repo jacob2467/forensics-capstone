@@ -20,6 +20,9 @@ SSD_vs_HDD = "The first and most noticeable difference between SSDs and HDDs is 
 deletedFiles = "The most common way data can be lost is when it’s deleted. Since computers store information in a binary format, everything is either a 0 or a 1. There’s no third option for “missing” data. Instead, when you “delete” data, what really happens is that the computer “marks” that data as not being used, and when the computer needs to write something to the disk, it overwrites the old data with the new data. If the data hasn’t been overwritten, it’s possible to use special software to read it and recover it that way. If it’s been partially overwritten, all you’ll get is a corrupted file.\n"
 damagedDrives = "Another way data can be lost is if the drive on which it’s stored is physically damaged. In such a case, the drive can sometimes be physically repaired. If, for example, the read/write head on a HDD breaks and can’t move anymore, you can replace the read/write head, or move the magnetic platter(s) on which the data is stored into another drive.\n"
 corruptedData = "Data is corrupted when it’s been written to the disk incorrectly, and it can no longer be read from. This can be caused by many different things, but one example is power loss. If a computer loses power while it’s in the middle of a write operation, the file it was writing to can become corrupted due to missing information. For the most part, corrupted files can’t be recovered, so the only way to get the corrupted data back is to restore from a backup, but that requires enough forethought to actually make a backup.\n"
+dataRecoveryInForensics = "The main difference between common data recovery and data recovery in the context of forensics is the intent. Computer forensics usually refers to locating or recovering data for the sake of an investigation. Common data recovery is data recovery in any other context.\n"
+digitalEvidence = "To be accepted as valid evidence in court, digital evidence needs to be handled in a very specific way so as to prevent it from being tampered with. First, it’s noted where the data was originally stored and how it was found. Then, a copy of the evidence is made, and the original is preserved. This prevents it from being tampered with, but it also serves another purpose. The evidence could be coming from anywhere. If the computer is old or hasn’t been treated well, performing analyses on the original data can lead to data loss. Copying it over to another drive solves this problem. After it’s been copied, \n"
+forensicsInAction = "One example of computer forensics being used in a real case is the case of Matt Baker. He was a minister at Crossroads Baptist Church in Hewitt, Texas. On April 8th, 2006, he called 911 and said that he found his wife, Kari, unconscious in their bedroom. A typed suicide note was found on the dresser next to an empty bottle of sleeping pills, and it was ruled as a suicide. However, Kari’s family didn’t believe that she would ever kill herself, so they requested that the situation be re-investigated. They found that, before Kari’s death, Matt had used his computer to do research on how to overdose on sleeping pills. They also found phone records of Matt calling Kari’s phone after she died. Investigators found that Matt had given Kari’s phone to a woman named Vanessa Bulls, who confessed that Matt said that he killed Kari for her. If not for computer forensics, Matt would have gotten away with killing his wife.\n"
 
 
 
@@ -30,7 +33,7 @@ typesOfStorage = [
     "Hard Disk Drives (HDDs)", "Solid State Drives (SSDs)", "SSDs vs. HDDs"]
 dataRecovery = ["Data recovery, as the name suggests, is the process of recovering lost data. There are a variety of methods used depending on how the data was lost. In order to understand how data recovery works, you first need to understand the different ways it can be lost:", "Deleted Files",
                 "Physically Damaged Drives", "Corrupted Data"]
-computerForensics = ["Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder"]
+computerForensics = ["Placeholder", "Data Recovery in Computer Forensics vs. Common Data Recovery", "How Digital Evidence is Handled", "Computer Forensics in Action", "Placeholder"]
 
 
 def idiotProofing():
@@ -140,15 +143,15 @@ def option_computerForensics():
 
     elif choice in answer_1:
         clearConsole()
-        print("Placeholder")
+        print(dataRecoveryInForensics)
         menuPrompt(option_computerForensics)
     elif choice in answer_2:
         clearConsole()
-        print("Placeholder")
+        print(digitalEvidence)
         menuPrompt(option_computerForensics)
     elif choice in answer_3:
         clearConsole()
-        print("Placeholder")
+        print(forensicsInAction)
         menuPrompt(option_computerForensics)
     else:
         idiotProofing()
