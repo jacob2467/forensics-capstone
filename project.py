@@ -1,10 +1,12 @@
 from os import system, name
 
+
 def clearConsole():
     if name == 'nt':
         _ = system('cls')
     else:
         _ = system('clear')
+
 
 answer_1 = ["1", "1.", "One", "one"]
 answer_2 = ["2", "2.", "Two", "two"]
@@ -18,15 +20,22 @@ deletedFiles = """The most common way data can be lost is when it’s deleted. S
 damagedDrives = """Another way data can be lost is if the drive on which it’s stored is physically damaged. In such a case, the drive can sometimes be physically repaired. If, for example, the read/write head on a HDD breaks and can’t move anymore, you can replace the read/write head, or move the magnetic platter(s) on which the data is stored into another drive.\n"""
 corruptedData = """Data is corrupted when it’s been written to the disk incorrectly, and it can no longer be read from. This can be caused by many different things, but one example is power loss. If a computer loses power while it’s in the middle of a write operation, the file it was writing to can become corrupted due to missing information. For the most part, corrupted files can’t be recovered, so the only way to get the corrupted data back is to restore from a backup, but that requires enough forethought to actually make a backup.\n"""
 
-main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here." , "How digital data is stored", "Types of data storage", "Data recovery"]
-typesOfStorage = ["There are a variety of methods used to store digital information. Which would you like to learn about?", "Hard Disk Drives (HDDs)", "Solid State Drives (SSDs)", "SSDs vs. HDDs"]
+main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here.",
+        "How digital data is stored", "Types of data storage", "Data recovery"]
+typesOfStorage = [
+    "There are a variety of methods used to store digital information. Which would you like to learn about?",
+    "Hard Disk Drives (HDDs)", "Solid State Drives (SSDs)", "SSDs vs. HDDs"]
 dataRecovery = ["""Data recovery, as the name suggests, is the process of recovering lost data. There are a variety of methods used depending on how the data was lost. In order to
-understand how data recovery works, you first need to understand the different ways it can be lost:""", "Deleted Files", "Physically Damaged Drives", "Corrupted Data"]
+understand how data recovery works, you first need to understand the different ways it can be lost:""", "Deleted Files",
+                "Physically Damaged Drives", "Corrupted Data"]
+
 
 def idiotProofing():
-    print("""That's not a valid option. You've gone and broken my code, but I'm generous, so I'll give you another chance. Press enter to start over.""")
+    print(
+        """That's not a valid option. You've gone and broken my code, but I'm generous, so I'll give you another chance. Press enter to start over.""")
     input()
     mainMenu()
+
 
 def menuPrompt(menu):
     back = input("Press enter when you're done reading to return to the previous menu.\n")
@@ -34,6 +43,7 @@ def menuPrompt(menu):
         mainMenu()
     else:
         menu()
+
 
 def mainMenu():
     clearConsole()
@@ -58,6 +68,7 @@ def mainMenu():
 
     else:
         idiotProofing()
+
 
 def option_typesOfStorage():
     clearConsole()
@@ -84,6 +95,7 @@ def option_typesOfStorage():
     else:
         idiotProofing()
 
+
 def option_recovery():
     clearConsole()
     choice = input(f"""{dataRecovery[0]}
@@ -108,5 +120,6 @@ def option_recovery():
         menuPrompt(option_recovery)
     else:
         idiotProofing()
+
 
 mainMenu()
