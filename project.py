@@ -11,6 +11,7 @@ def clearConsole():
 answer_1 = ["1", "1.", "One", "one"]
 answer_2 = ["2", "2.", "Two", "two"]
 answer_3 = ["3", "3.", "Three", "three"]
+answer_4 = ["4", "4.", "Four", "four"]
 
 HowIsDigitalDataStored = "Computers store information in base 2, also known as binary. This means that every bit of information on your computer, from the code used to run the app you’re using to read this, to the files in your “homework” folder, can be broken down into a seemingly endless string of 0s and 1s. A good example of this is the alphabet. There are many ways to store letters of the alphabet, but one of the simplest methods is called ASCII. With ASCII, computers don’t really see letters as letters; instead, letters are stored based on their numeric value, with A being equivalent to 1, B to 2, and so on. This seems pretty simple on its own, but remember that computers store information in binary, so the “1” is actually 00000001, the “2” is actually 00000010, etc. There are a variety of methods used to store binary information, but most computers either use a hard disk drive (HDD) or solid state drive (SSD). Due to the binary nature of computers, all forms of digital storage rely on binary forms of data storage. To understand this concept with an analogy, imagine taking a standardized test with four multiple choice questions that each have four possible answers (A, B, C, or D). If you answer B to question 1, you could represent that as 0100. In other words, A is not filled in, B is filled in, C is not, and D is not. Using this system, if a student answered A, B, C, D in that order, you could represent that as 1000 0100 0010 0001 (without the spaces).\n"
 HDDs = "Hard disk drives (HDDs) use billions of tiny pieces of metal to store information. The metals used aren’t naturally magnetic, but they can be magnetized. A piece of metal can either be magnetized or not magnetized; this is an example of a binary form of information storage. In an HDD, an unmagnetized piece of metal represents a 0, and a magnetized one represents a 1. These pieces of iron are stored on a spinning disk called a platter, similar to the scratches stored on a record. In order to retrieve information, something called the read/write head, similar to the needle on a record player, checks whether or not these pieces of iron are magnetized, and reports that information back to the computer. In order to write information to the disk, the read/write head will either magnetize or demagnetize a piece of iron, changing it from a 0 to a 1, or vice versa.\n"
@@ -20,13 +21,16 @@ deletedFiles = "The most common way data can be lost is when it’s deleted. Sin
 damagedDrives = "Another way data can be lost is if the drive on which it’s stored is physically damaged. In such a case, the drive can sometimes be physically repaired. If, for example, the read/write head on a HDD breaks and can’t move anymore, you can replace the read/write head, or move the magnetic platter(s) on which the data is stored into another drive.\n"
 corruptedData = "Data is corrupted when it’s been written to the disk incorrectly, and it can no longer be read from. This can be caused by many different things, but one example is power loss. If a computer loses power while it’s in the middle of a write operation, the file it was writing to can become corrupted due to missing information. For the most part, corrupted files can’t be recovered, so the only way to get the corrupted data back is to restore from a backup, but that requires enough forethought to actually make a backup.\n"
 
-main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here.",
-        "How digital data is stored", "Types of data storage", "Data recovery"]
+
+
+main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here.", "How digital data is stored",
+        "Types of data storage", "Data recovery", "Computer Forensics"]
 typesOfStorage = [
     "There are a variety of methods used to store digital information. Which would you like to learn about?",
     "Hard Disk Drives (HDDs)", "Solid State Drives (SSDs)", "SSDs vs. HDDs"]
 dataRecovery = ["Data recovery, as the name suggests, is the process of recovering lost data. There are a variety of methods used depending on how the data was lost. In order to understand how data recovery works, you first need to understand the different ways it can be lost:", "Deleted Files",
                 "Physically Damaged Drives", "Corrupted Data"]
+computerForensics = ["Placeholder", "Placeholder", "Placeholder", "Placeholder", "Placeholder"]
 
 
 def idiotProofing():
@@ -49,7 +53,8 @@ def mainMenu():
     choice = input(f"""{main[0]}
     1. {main[1]}
     2. {main[2]}
-    3. {main[3]}\n""")
+    3. {main[3]}
+    4. {main[4]}\n""")
 
     if choice == "menu":
         mainMenu()
@@ -64,6 +69,9 @@ def mainMenu():
 
     elif choice in answer_3:
         option_recovery()
+
+    elif choice in answer_4:
+        option_computerForensics()
 
     else:
         idiotProofing()
@@ -120,5 +128,29 @@ def option_recovery():
     else:
         idiotProofing()
 
+def option_computerForensics():
+    clearConsole()
+    choice = input(f"""{computerForensics[0]}
+    1. {computerForensics[1]}
+    2. {computerForensics[2]}
+    3. {computerForensics[3]}\n""")
+
+    if choice == "menu":
+        mainMenu()
+
+    elif choice in answer_1:
+        clearConsole()
+        print("Placeholder")
+        menuPrompt(option_computerForensics)
+    elif choice in answer_2:
+        clearConsole()
+        print("Placeholder")
+        menuPrompt(option_computerForensics)
+    elif choice in answer_3:
+        clearConsole()
+        print("Placeholder")
+        menuPrompt(option_computerForensics)
+    else:
+        idiotProofing()
 
 mainMenu()
