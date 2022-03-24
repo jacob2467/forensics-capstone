@@ -26,7 +26,7 @@ forensicsInAction = "One example of computer forensics being used in a real case
 
 
 
-main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here.", "How digital data is stored",
+main = ["What would you like to learn about? I recommend going in order. Type 'menu' at any time to return here. To choose an option, type the cooresponding number and press enter.", "How digital data is stored",
         "Types of data storage", "Data recovery", "Computer Forensics & Digital Evidence"]
 typesOfStorage = [
     "There are a variety of methods used to store digital information. Which would you like to learn about?",
