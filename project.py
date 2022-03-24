@@ -1,7 +1,10 @@
-from os import system
+from os import system, name
 
 def clearConsole():
-    system("cls")
+    if name == 'nt':
+        _ = system('cls')
+    else:
+        _ = system('clear')
 
 answer_1 = ["1", "1.", "One", "one"]
 answer_2 = ["2", "2.", "Two", "two"]
