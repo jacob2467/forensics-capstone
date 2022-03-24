@@ -70,6 +70,7 @@ def mainMenu():
         mainMenu()
 
     if choice in answer_1:
+        clearConsole()
         print(HowIsDigitalDataStored)
         menuPrompt(mainMenu)
 
@@ -93,12 +94,15 @@ def option_typesOfStorage():
         mainMenu()
 
     elif choice in answer_1:
+        clearConsole()
         print(HDDs)
         menuPrompt(option_typesOfStorage)
     elif choice in answer_2:
+        clearConsole()
         print(SSDs)
         menuPrompt(option_typesOfStorage)
     elif choice in answer_3:
+        clearConsole()
         print(SSD_vs_HDD)
         menuPrompt(option_typesOfStorage)
     else:
@@ -115,12 +119,15 @@ def option_recovery():
         mainMenu()
 
     elif choice in answer_1:
+        clearConsole()
         print(deletedFiles)
         menuPrompt(option_recovery)
     elif choice in answer_2:
+        clearConsole()
         print(damagedDrives)
         menuPrompt(option_recovery)
     elif choice in answer_3:
+        clearConsole()
         print(corruptedData)
         menuPrompt(option_recovery)
     else:
