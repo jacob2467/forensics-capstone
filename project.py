@@ -1,3 +1,8 @@
+from os import system
+
+def clearConsole():
+    system("cls")
+
 answer_1 = ["1", "1.", "One", "one"]
 answer_2 = ["2", "2.", "Two", "two"]
 answer_3 = ["3", "3.", "Three", "three"]
@@ -55,6 +60,7 @@ def menuPrompt(menu):
         menu()
 
 def mainMenu():
+    clearConsole()
     choice = input(f"""{main[0]}
     1. {main[1]}
     2. {main[2]}
@@ -77,6 +83,7 @@ def mainMenu():
         idiotProofing()
 
 def option_typesOfStorage():
+    clearConsole()
     choice = input(f"""{typesOfStorage[0]}
     1. {typesOfStorage[1]}
     2. {typesOfStorage[2]}
@@ -98,6 +105,7 @@ def option_typesOfStorage():
         idiotProofing()
 
 def option_recovery():
+    clearConsole()
     choice = input(f"""{dataRecovery[0]}
     1. {dataRecovery[1]}
     2. {dataRecovery[2]}
