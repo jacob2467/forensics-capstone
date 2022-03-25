@@ -1,15 +1,15 @@
 from os import system, name
 
 
-def clearConsole():
+def resize():
     if name == 'nt':
-        _ = system('MODE 150, 100')
+        _ = system('MODE 50, 100')
     else:
         _ = system("printf '\e[8;50;100t'")
 
-def resize():
+def clearConsole():
     if name == 'nt':
-        _ = system('')
+        _ = system('cls')
     else:
         _ = system('clear')
 
@@ -74,6 +74,7 @@ def menuPrompt(menu):
 
 
 def mainMenu():
+    resize()
     clearConsole()
     choice = input(f"""{main[0]}
     1. {main[1]}
