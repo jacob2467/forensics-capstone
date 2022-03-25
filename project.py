@@ -73,7 +73,7 @@ def idiotProofing():
 
 
 def menuPrompt(menu):
-    back = input("Press enter when you're done reading to return to the previous menu.\n")
+    back = input("Press enter when you're done reading to return to the previous menu, or type menu to return to the main menu.\n")
     if back == "menu":
         mainMenu()
     else:
