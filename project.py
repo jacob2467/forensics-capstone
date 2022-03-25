@@ -3,9 +3,9 @@ from os import system, name
 
 def resize():
     if name == 'nt':
-        _ = system('MODE 50, 100')
+        _ = system('MODE 100, 30')
     else:
-        _ = system("printf '\e[8;50;100t'")
+        _ = system("printf '\e[8;30;100t'")
 
 def clearConsole():
     if name == 'nt':
