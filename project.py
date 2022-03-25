@@ -3,7 +3,7 @@ from os import system, name
 
 def clearConsole():
     if name == 'nt':
-        _ = system('MODE 50, 100')
+        _ = system('MODE 150, 100')
     else:
         _ = system("printf '\e[8;50;100t'")
 
